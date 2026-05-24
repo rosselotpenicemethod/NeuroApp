@@ -1,0 +1,33 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isSelf(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    match /authorizedUsers/{uid} {
+      allow read: if isSelf(uid);
+      allow write: if false;
+    }
+
+    match /authorizedEmails/{email} {
+      allow read: if signedIn() && request.auth.token.email == email;
+      allow write: if false;
+    }
+
+    match /users/{uid} {
+      allow read, update, create: if isSelf(uid);
+      allow delete: if false;
+
+      match /sessions/{sessionId} {
+        allow read, create: if isSelf(uid);
+        allow update, delete: if false;
+      }
+    }
+  }
+}

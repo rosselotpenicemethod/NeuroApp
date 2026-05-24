@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "ROSSELOT PENICE METHOD",
+    "slug": "rosselot-penice-method",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo/rosselot-penice-full-color.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "rpmethod",
+    "splash": {
+      "image": "./assets/logo/rosselot-penice-full-color.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#050505"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rosselotpenice.method"
+    },
+    "android": {
+      "package": "com.rosselotpenice.method",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo/rosselot-penice-full-color.png",
+        "backgroundColor": "#050505"
+      }
+    }
+  }
+}
