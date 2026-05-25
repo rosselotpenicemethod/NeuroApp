@@ -7,6 +7,14 @@
     "icon": "./assets/logo/rosselot-penice-full-color.png",
     "userInterfaceStyle": "dark",
     "scheme": "rpmethod",
+
+    "extra": {
+      "eas": {
+        "projectId": "tu-id-real"
+      }
+    }
+  }
+}
     "splash": {
       "image": "./assets/logo/rosselot-penice-full-color.png",
       "resizeMode": "contain",
