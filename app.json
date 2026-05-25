@@ -12,24 +12,28 @@
       "eas": {
         "projectId": "547ca5ba-bc0e-4c62-af26-c08a941dd1be"
       }
-    }
-  }
-}
+    },
+
     "splash": {
       "image": "./assets/logo/rosselot-penice-full-color.png",
       "resizeMode": "contain",
       "backgroundColor": "#050505"
     },
+
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.rosselotpenice.method"
     },
+
     "android": {
       "package": "com.rosselotpenice.method",
       "adaptiveIcon": {
         "foregroundImage": "./assets/logo/rosselot-penice-full-color.png",
         "backgroundColor": "#050505"
       }
-    }
+    },
+
+    "sdkVersion": "53.0.0",
+    "platforms": ["ios", "android"]
   }
 }
