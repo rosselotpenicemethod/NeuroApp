@@ -1,14 +1,30 @@
-import "react-native-gesture-handler";
-
+import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { AuthProvider } from "./services/AuthContext";
-import { AppNavigator } from "./navigation/AppNavigator";
+import { NavigationContainer } from "@react-navigation/native";
+import { View, Text } from "react-native";
 
 export default function App() {
   return (
-    <AuthProvider>
-      <StatusBar style="light" />
-      <AppNavigator />
-    </AuthProvider>
+    <NavigationContainer>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: "#050505",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        <StatusBar style="light" />
+        <Text
+          style={{
+            color: "#D8B35F",
+            fontSize: 28,
+            fontWeight: "bold"
+          }}
+        >
+          ROSSELOT PENICE METHOD
+        </Text>
+      </View>
+    </NavigationContainer>
   );
 }
